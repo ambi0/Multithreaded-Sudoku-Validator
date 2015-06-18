@@ -6,7 +6,19 @@ This program reads from a file possible solutions to sudoku puzzles and evaluate
   
 Group members: Eric Smith, Caitlin Facchina, Darko Atanackovic and Maher Husein
 
-### To Compile...
+### Installation
+
+```sh
+$ git clone https://github.com/ambi0/Multithreaded-Sudoku-Validator Multithreaded-Sudoku-Validator
+$ cd Multithreaded-Sudoku-Validator
+```
+
+### To Compile and Execute
+
+```sh
+$ gcc -o sudoku_validator sudoku_validator.c -lpthread
+$ ./sudoku_validator input.txt
+```
 
 ### Input Structure
 
@@ -16,13 +28,6 @@ Group members: Eric Smith, Caitlin Facchina, Darko Atanackovic and Maher Husein
 ### Tech
 
 Multithreaded Sudoku Validator uses POSIX pthreads to determine the validity of possible solutions to sudoku puzzles.
-
-### Installation
-
-```sh
-$ git clone https://github.com/ambi0/Multithreaded-Sudoku-Validator Multithreaded-Sudoku-Validator
-$ cd Multithreaded-Sudoku-Validator
-```
 
 ### Todo's
 
