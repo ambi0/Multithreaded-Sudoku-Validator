@@ -23,6 +23,7 @@ $ ./sudoku_validator input.txt
 ```
 
 ### Input Structure
+The first integer, n, is the number of sudoku puzzles and the n 9x9 sudoku puzzles to evaluate follow.
 ```sh
 3
 295743861
