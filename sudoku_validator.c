@@ -210,7 +210,7 @@ int readSudokuGrid(int (*grid)[9], int grid_no, FILE *fp){
 	fseek(fp, 1, SEEK_CUR); // Seek to start of first sudoku grid
 
 	if(grid_no < 1){
-		puts("Not a valid grid number. Please specify a grid number > 1.");
+		puts("Not a valid grid number. Please specify a grid number > 0.");
 		return -1;
 	}
 	else if(grid_no > 1){ // Seek past newlines from previous grids
