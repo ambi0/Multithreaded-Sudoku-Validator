@@ -203,15 +203,15 @@ void *validateCols(void *data){
      * @param fp 
      *      File to read from.
      */
-int readSudokuGrid(int (*grid)[9], int grid_no, FILE *fp){ //make sure valid entires within sudoku grid
+int readSudokuGrid(int (*grid)[9], int grid_no, FILE *fp){
 	int garbage;
 	fseek(fp, 0, SEEK_SET);
 	fscanf(fp, "%d", &garbage);
 	fseek(fp, 1, SEEK_CUR); // Seek to start of first sudoku grid
 
 	if(grid_no < 1){
-		puts("Please specify a lol");
-		return 0;
+		puts("Not a valid grid number. Please specify a grid number > 1.");
+		return -1;
 	}
 	else if(grid_no > 1){ // Seek past newlines from previous grids
 		fseek(fp, 9*(grid_no - 1), SEEK_CUR); // 10 newlines per grid when more than one grid
